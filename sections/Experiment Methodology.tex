@@ -6,8 +6,31 @@ The core methodology involves the integration of dynamic time-series data (e.g.,
 By leveraging deep attention mechanisms, the proposed model will capture both temporal dependencies and cross-modal relationships, allowing for interpretable and robust forecasting of credit, market, and liquidity risks.
 
 \subsection{Data Mining Techniques to Be Used}
+The project will employ a systematic pipeline of advanced data mining and deep learning techniques to transform raw, heterogeneous data into action able risk insights, including the following three parts: data preprocessing, multimodal fusion architecture, and frequency decomposition for noise reduction.
+
+In terms of data preprocessing, we obtain stock data of SSE, SZSE and financial reports. To address the differing scales of features, a Z-score normalization will be applied to time-series data, and Min-Max scaling will be used for features destined for attention mechanisms. Meanwhile, We will generate a comprehensive set of technical indicators from the daily K-line data to enrich the temporal representation. This includes: trend indicators (Simple Moving Average, Exponential Moving Average), momentum indicators (Relative Strength Index, Moving Average Convergence Divergence), volatility indicators (Bollinger Bands, standard deviation of returns), and liquidity indicators (average trading volume, volume-weighted average price).
+
+In terms of multimodal fusion architecture, the core of our data mining approach is the novel fusion mechanism within the transformer framework, consisting of a temporal encoder, a static feature encoder, and a cross-attention for fusion. The preprocessed time-series of technical indicators and raw prices will be passed through a Transformer encoder. Self-attention layers will capture long-range dependencies and patterns across time. Then, the vector of static fundamental and macroeconomic indicators will be projected into a latent space using a dense neural network. Following that, we will use a cross-attention mechanism where the static feature vector serves as a query to attend to the encoded temporal sequence (keys and values) instead of simple concatenation. This allows the model to dynamically weigh the importance of different historical time points based on the company's current fundamental profile, enabling a deep, context-aware fusion.
+
+In terms of frequency decomposition for noise reduction, we may employ Empirical Mode Decomposition (EMD) or its variant CEEMDAN to improve robustness against market noise. These techniques will decompose price series into intrinsic mode functions (IMFs) of different frequencies, potentially allowing the model to focus on trend and cyclical components while filtering out high-frequency noise.
 
 \subsection{Feasibility}
+The successful execution of this project is highly feasible, supported by four key pillars:
+\begin{itemize}
+    \item \textbf{Data Feasibility: } The primary dataset required for this project is the "Shanghai and Shenzhen Stock Exchange Data," which we already possess. This dataset comprehensively includes daily K-line data, basic company information, balance sheets, and risk warning lists, perfectly aligning with our requirements for both dynamic time-series and static fundamental data. Its structured nature minimizes data collection overhead.
+    \item \textbf{Technical Feasibility: } The proposed model is built on the Transformer architecture, which is well-established in deep learning libraries like PyTorch and TensorFlow. Team members have foundational knowledge in deep learning and financial data analysis. The implementation of encoders and attention mechanisms, while complex, is a well-documented process with ample open-source resources and research papers available for guidance.
+    \item \textbf{Computational Feasibility: } Training a Transformer model on financial time-series data is computationally demanding but manageable. The data size, while large, is not on the scale of internet-scale datasets. The project can be conducted using high-performance computing resources available through the university or cloud computing credits (e.g., AWS, GCP), making the computational requirements feasible.
+    \item \textbf{Methodological Feasibility: } The core concept of using attention for multimodal fusion is a recognized and active research area. Our approach of applying it to financial risk prediction is innovative yet methodologically sound, building directly on advancements in NLP and computer vision. The project's scope, from data preprocessing to model evaluation, follows a standard and achievable machine learning lifecycle.
+\end{itemize}
+
 
 \subsection{Evaluation Plan}
+A rigorous and multi-faceted evaluation plan will be implemented to validate the performance, robustness, and utility of the proposed model.
+
+\begin{itemize}
+	\item \textbf{Evaluation Metrics: } Model performance will be assessed using a suite of metrics to provide a comprehensive view including Area Under the Receiver Operating Characteristic Curve (AUC-ROC) and the F1-Score.
+	\item \textbf{Baseline Models for Comparison: } The proposed Multi-Modal Transformer will be benchmarked against a range of strong baseline models to isolate the contribution of its architectural innovations, including traditional models (Logistic Regression, Gradient Boosting Machines) and deep learning models (LST and GRU).
+	\item \textbf{Validation Methodology: } A time-series split (e.g., a rolling window or expanding window approach) will be used for all experiments to prevent data leakage and respect the temporal order of financial data. The dataset will be divided into sequential training, validation, and test sets.
+	\item \textbf{Ablation Studies: } We will conduct ablation studies to quantify the contribution of each modality. This involves training the model with (1) only time-series data, (2) only static data, and (3) both, to demonstrate the necessity of multi-modal integration.
+\end{itemize}
 
