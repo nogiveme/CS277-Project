@@ -1,0 +1,48 @@
+\begin{thebibliography}{6}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ahbali et~al.(2022)Ahbali, Liu, Nanda, Stark, Talukder, and
+  Khandpur]{ahbali2022identifying}
+Noujoud Ahbali, Xinyuan Liu, Albert Nanda, Jamie Stark, Ashit Talukder, and
+  Rupinder~Paul Khandpur.
+\newblock Identifying corporate credit risk sentiments from financial news.
+\newblock In \emph{Proceedings of the 2022 Conference of the North American
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies: Industry Track}, pages 362--370, 2022.
+
+\bibitem[Bender and Panz(2020)]{risk_classification}
+Micha Bender and Sven Panz.
+\newblock A general framework for the identification and categorization of
+  risks-an application to the context of financial markets.
+\newblock \emph{Available at SSRN 3738273}, 2020.
+
+\bibitem[Gu et~al.(2020)Gu, Kelly, and Xiu]{gu2020empirical}
+Shihao Gu, Bryan Kelly, and Dacheng Xiu.
+\newblock Empirical asset pricing via machine learning.
+\newblock \emph{The Review of Financial Studies}, 33\penalty0 (5):\penalty0
+  2223--2273, 2020.
+
+\bibitem[Khaidem et~al.(2016)Khaidem, Saha, and Dey]{random_forest}
+Luckyson Khaidem, Snehanshu Saha, and Sudeepa~Roy Dey.
+\newblock Predicting the direction of stock market prices using random forest.
+\newblock \emph{arXiv preprint arXiv:1605.00003}, 2016.
+
+\bibitem[Lee(2007)]{svm}
+Young-Chan Lee.
+\newblock Application of support vector machines to corporate credit rating
+  prediction.
+\newblock \emph{Expert Systems with Applications}, 33\penalty0 (1):\penalty0
+  67--74, 2007.
+
+\bibitem[Wang et~al.(2023)Wang, Chen, Florescu, and Wen]{wang2023sparsity}
+Dan Wang, Zhi Chen, Ionu{\c{t}} Florescu, and Bingyang Wen.
+\newblock A sparsity algorithm for finding optimal counterfactual explanations:
+  Application to corporate credit rating.
+\newblock \emph{Research in International Business and Finance}, 64:\penalty0
+  101869, 2023.
+
+\end{thebibliography}
