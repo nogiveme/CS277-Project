@@ -1,0 +1,18 @@
+\section{Problem Statement}
+\label{sec:Problem Statement}
+
+Financial markets are inherently nonlinear, dynamic, and interdependent systems in which multiple forms of risk—particularly credit risk, market risk, and liquidity risk—evolve simultaneously and interact through complex feedback mechanisms. Accurately forecasting these risks and quantifying their correlations is critical for maintaining market stability, optimizing investment strategies, and preventing systemic crises.
+
+However, several fundamental challenges remain unsolved.
+First, existing econometric and machine learning models often treat each risk dimension independently and fail to capture cross-risk dependencies and temporal coupling among them.
+Second, financial data are inherently multimodal: they include dynamic, high-frequency time series (e.g., daily price returns, volatility, trading volumes) and static, low-frequency structural data (e.g., financial statements, leverage ratios, macroeconomic indicators). Traditional models lack mechanisms to effectively integrate these heterogeneous data sources.
+Third, most time-series prediction models, such as RNN or LSTM, struggle with long-term dependencies, non-stationarity, and noise sensitivity, resulting in unstable predictions under regime shifts or high-volatility conditions.
+
+Consequently, there is a pressing need for a unified framework capable of:
+\begin{enumerate}[label=(\arabic*)]
+    \item fusing static and dynamic data modalities,
+    \item modeling complex temporal relationships across multiple risk dimensions, and
+    \item providing interpretable correlation analysis to reveal systemic interactions.
+\end{enumerate}
+
+This project addresses these gaps by developing a multimodal Transformer-based financial risk prediction framework that integrates dynamic (daily K-line and market indicators) and static (firm-level financial and macroeconomic) data. By leveraging self-attention and cross-modal fusion, the model aims to jointly predict credit, market, and liquidity risks, quantify their interdependencies, and improve both accuracy and interpretability in systemic risk assessment.a

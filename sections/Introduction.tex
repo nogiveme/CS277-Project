@@ -1,0 +1,19 @@
+\section{Introduction}
+\label{sec:Introduction}
+The stability of modern financial systems depends heavily on the accurate prediction and effective management of financial risks.
+These risks—primarily credit risk, market risk, and liquidity risk—are interdependent and evolve dynamically under rapidly changing market environments.
+With the growing complexity of global markets and the massive availability of real-time financial data, there is an increasing need for intelligent and data-driven methods that can monitor and anticipate risk fluctuations in a timely and interpretable manner.
+
+Traditional econometric models, such as Vector Autoregression (VAR) or GARCH-type frameworks, often struggle to capture the nonlinear dependencies and high-frequency dynamics inherent in financial markets.
+Recent advances in machine learning have introduced deep neural models capable of extracting complex patterns from large-scale financial data.
+However, most existing models still treat different data modalities—such as time-series trading data (e.g., daily returns, price volatility, transaction volume) and static fundamental indicators (e.g., leverage ratio, profitability, cash flow, macroeconomic metrics)—as isolated information sources.
+This limitation hinders the model’s ability to reflect the joint effects of short-term market turbulence and long-term structural fundamentals.
+
+In this context, Transformer-based architectures have emerged as a powerful paradigm for sequential data modeling, offering superior capability in capturing long-range temporal dependencies through self-attention mechanisms.
+Their non-recurrent structure allows efficient parallel computation and interpretable feature weighting, making them particularly suitable for high-frequency and heterogeneous financial data.
+Nevertheless, integrating static and dynamic information streams within a unified Transformer framework remains an open challenge due to differences in sampling frequency, feature representation, and statistical characteristics.
+
+To address these challenges, this project proposes a multimodal Transformer-based framework that integrates dynamic market signals with static financial fundamentals for comprehensive financial risk prediction and cross-risk correlation analysis.
+The model aims to jointly evaluate credit, market, and liquidity risks by fusing information from diverse temporal and structural data sources.
+By leveraging multi-head attention mechanisms, the system will learn hierarchical feature dependencies across modalities and risk dimensions, enabling interpretable identification of systemic interactions.
+This integrated approach is expected to enhance the robustness and diagnostic capability of financial risk assessment, providing valuable insights for market stability, regulatory supervision, and investment decision-making.
